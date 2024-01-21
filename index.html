@@ -78,23 +78,16 @@
     </div>
 
     <script>
-    document.getElementById('surveyForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        var selectedSatisfaction = document.querySelector('input[name="satisfaction"]:checked');
-
-        // ラジオボタンが選択されているか確認
-        if (selectedSatisfaction) {
-            var satisfaction = selectedSatisfaction.value;
+        document.getElementById('surveyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var satisfaction = document.querySelector('input[name="satisfaction"]:checked').value;
             if (satisfaction === 'verySatisfied' || satisfaction === 'satisfied') {
                 window.location.href = 'https://bit.ly/3OakViR'; // 適切なURLに置き換えてください
             } else {
-                window.location.href = 'https://forms.gle/xihaP2im6Pnhbs1g9'; // 新しいURL
+            　　　　　　　　window.location.href = 'https://forms.gle/xihaP2im6Pnhbs1g9'; // 新しいURL
             }
-        } else {
-            alert('満足度を選択してください。');
-        }
-    });
-</script>
-
+        });
+    </script>
 </body>
 </html>
+    
